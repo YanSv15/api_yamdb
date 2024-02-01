@@ -44,17 +44,34 @@ YaMDB отправляет письмо с кодом подтверждения
 # Как запустить проект:
 
 # Клонируйте репозиторий с проектом и перейдите в каталог с ним:
-- git clone https://github.com/DmitriiParshin/api_yamdb
-- cd api_yamdb
-- Выполните команду для создания образов и запуска в контейнере приложения, сервера и базы данных
-- sudo docker-compose up -d --build
-- Создайте и выполните миграции:
-- sudo docker-compose exec web python manage.py makemigrations
-- sudo docker-compose exec web python manage.py migrate
-- Соберите статику и создайте суперпользователя:
-- sudo docker-compose exec web python manage.py createsuperuser
-- sudo docker-compose exec web python manage.py collectstatic --no-input 
-- Ваш проект запустился на http://localhost/
+```python
+git clone git@github.com:YanSv15/api_yamdb.git
+```
+```python
+cd api_yamdb
+```
+# Выполните команду для создания образов и запуска в контейнере приложения, сервера и базы данных
+
+```python
+sudo docker-compose up -d --build
+```
+# Создайте и выполните миграции:
+
+```python
+sudo docker-compose exec web python manage.py makemigrations
+```
+```python
+sudo docker-compose exec web python manage.py migrate
+```
+# Соберите статику и создайте суперпользователя:
+```python
+sudo docker-compose exec web python manage.py createsuperuser
+```
+```python
+sudo docker-compose exec web python manage.py collectstatic --no-input 
+```
+
+Ваш проект запустился на http://localhost/
 
 Полная документация доступна по адресу http://localhost/redoc/
 
